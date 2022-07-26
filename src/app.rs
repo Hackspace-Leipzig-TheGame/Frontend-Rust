@@ -1,6 +1,7 @@
 use yew::prelude::*;
 
 use crate::components::EmojiSidebar;
+use crate::components::Card;
 
 pub struct App {
     nothing: u8,
@@ -31,7 +32,9 @@ impl Component for App {
                         <EmojiSidebar />
                     </div>
                 </div>
-                <p class="text-center">{ "cards?" }</p>
+                <div class="text-center">
+                    <Card number=5 />
+                </div>
             </main>
         }
     }
