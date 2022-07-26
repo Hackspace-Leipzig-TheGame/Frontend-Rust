@@ -1,5 +1,7 @@
 use yew::prelude::*;
 
+use crate::components::EmojiSidebar;
+
 pub struct App {
     nothing: u8,
 }
@@ -25,7 +27,9 @@ impl Component for App {
                 <p class="text-4xl text-center">{ "this will have stuff soon" }</p>
                 <div class="flex flex-row grow h-full">
                     <p class="grow shrink">{ "the game?" }</p>
-                    <p class="w-40">{ "chat?" }</p>
+                    <div>
+                        <EmojiSidebar />
+                    </div>
                 </div>
                 <p class="text-center">{ "cards?" }</p>
             </main>
