@@ -16,6 +16,7 @@ impl Component for App {
 
     type Properties = ();
 
+
     fn create(ctx: &Context<Self>) -> Self {
         Self {
             nothing: 0,
@@ -23,6 +24,7 @@ impl Component for App {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
+        let cardnumbers = [1, 20, 25, 63, 91, 95];
         html! {
             <main class="w-screen h-screen flex flex-col">
                 <p class="text-4xl text-center">{ "this will have stuff soon" }</p>
@@ -32,8 +34,14 @@ impl Component for App {
                         <EmojiSidebar />
                     </div>
                 </div>
-                <div class="text-center">
-                    <Card number=5 />
+                <div class="flex flex-row justify-around">
+                    {
+                        cardnumbers.into_iter().map(|number| {
+                            html!{
+                                <Card number={number} showNumber=true />
+                            }
+                        }).collect::<Html>()
+                    }
                 </div>
             </main>
         }
