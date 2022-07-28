@@ -1,4 +1,4 @@
-use yew::{html, function_component};
+use yew::{function_component, html};
 
 const EMOJIS: &[&str] = &[
     "🥹",
@@ -22,7 +22,6 @@ const EMOJIS: &[&str] = &[
     "👿",
     "💀",
     "💢",
-    "💯",
     "😇",
     "😓",
     "😡",

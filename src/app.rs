@@ -1,26 +1,21 @@
 use yew::prelude::*;
 
-use crate::components::EmojiSidebar;
 use crate::components::Card;
+use crate::components::EmojiSidebar;
 
 pub struct App {
     nothing: u8,
 }
 
-pub enum Msg {
-
-}
+pub enum Msg {}
 
 impl Component for App {
     type Message = Msg;
 
     type Properties = ();
 
-
     fn create(ctx: &Context<Self>) -> Self {
-        Self {
-            nothing: 0,
-        }
+        Self { nothing: 0 }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {

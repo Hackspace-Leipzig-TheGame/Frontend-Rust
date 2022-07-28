@@ -1,7 +1,6 @@
-
 mod card;
-mod emoji_sidebar;
 mod deck;
+mod emoji_sidebar;
 
 pub use card::Card;
 pub use emoji_sidebar::EmojiSidebar;
